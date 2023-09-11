@@ -1,0 +1,12 @@
+In this task, we present a comprehensive exposition of the vehicle's control and overtaking mechanism, with particular emphasis on the software components. The overarching objective of this investigation is to facilitate the realization of seamless and secure vehicular maneuvers under diverse and dynamic traffic conditions. 
+
+We provide a concise breakdown of the vehicle's control and overtaking mechanism. This task focus on the software, including initialization, parameter setup, speed control, proximity detection, driving feedback loop, and overtaking logic. The goal is to ensure seamless and safe vehicle maneuvers in varying traffic conditions. Here is the details:
+
+1.	Initialization and Imports import Driver class, create sensor list. 
+2.	Parameter Configuration sets lane, overtaking, speed, timing. 
+3.	PID Control via apply_PID maintains target. 
+4.	Speed Analysis computes average with get_ema_speed. 
+5.	Detection Functions: is_vehicle_on_side, reduce_speed_if_vehicle_on_side adjust speed near others. 
+6.	Driving Loop adapts speed, attempts overtakes, realigns, steers using GPS.
+
+Overtaking Logic: Trigger overtaking when conditions are met after detecting an obstacle. Log start and end times of overtaking. Revert to the original lane and complete the maneuver in the new lane.
